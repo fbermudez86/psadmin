@@ -18,7 +18,8 @@ var config = {
 		images: './src/images/*',
 		css: [
       		'node_modules/bootstrap/dist/css/bootstrap.min.css',
-      		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
+      		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+      		'node_modules/toastr/toastr.css'
     	],
 		dist: './dist',
 		mainJs: './src/main.js'
@@ -61,6 +62,7 @@ gulp.task('css', function() {
 		.pipe(concat('bundle.css'))
 		.pipe(gulp.dest(config.paths.dist + '/css'));
 });
+
 // Migrates images to dist folder
 // Note that I could even optimize my images here
 gulp.task('images', function () {
